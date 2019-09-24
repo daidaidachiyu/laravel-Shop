@@ -12,9 +12,11 @@ class CartController extends Controller
     //
     public function add(AddCartRequest $request)
     {
+        
         $user   = $request->user();
         $skuId  = $request->input('sku_id');
         $amount = $request->input('amount');
+
 
 
         // 从数据库中查询该商品是否已经在购物车中
